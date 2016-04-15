@@ -8,7 +8,7 @@
  *   
  */
 
-package com.sqa.lp.util.helpers;
+package com.sqa.lp.helpers.exceptions;
 
 /**
  * InvalidAcceptableNumberException //ADDD (description of class)
