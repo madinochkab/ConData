@@ -10,14 +10,9 @@
 
 package com.sqa.lp.util.helpers;
 
-import java.util.Scanner;
+import java.util.*;
 
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Ignore;
-import org.junit.Test;
+import org.testng.annotations.*;
 
 /**
  * RequestInputTest //ADDD (description of class)
@@ -65,7 +60,7 @@ public class RequestInputTest {
 	 * @param question
 	 * @param userValue
 	 */
-	@Before
+	@BeforeMethod
 	public void clearVariables() {
 		question = "";
 		userValue = "";
@@ -75,7 +70,7 @@ public class RequestInputTest {
 	 * @param question
 	 * @param userValue
 	 */
-	@After
+	@AfterMethod
 	public void displayOutput() {
 		// TODO Auto-generated method stub
 		System.out.println("For the question \"" + question + "\", you have given the value of (" + userValue + ")");
@@ -86,8 +81,7 @@ public class RequestInputTest {
 	 * Test method for
 	 * {@link com.sqa.lp.util.helpers.RequestInput#getChar(java.lang.String)}.
 	 */
-	@Test
-	@Ignore
+	@Test(enabled = false)
 	public void testGetChar() {
 
 	}
@@ -97,8 +91,7 @@ public class RequestInputTest {
 	 * {@link com.sqa.lp.util.helpers.RequestInput#getChar(java.lang.String, char[])}
 	 * .
 	 */
-	@Test
-	@Ignore
+	@Test(enabled = false)
 	public void testGetCharStringCharArray() {
 
 	}
