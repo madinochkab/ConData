@@ -10,14 +10,9 @@
 
 package com.sqa.lp.util.helpers;
 
-import java.util.Scanner;
+import java.util.*;
 
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Ignore;
-import org.junit.Test;
+import org.junit.*;
 
 /**
  * RequestInputTest //ADDD (description of class)
