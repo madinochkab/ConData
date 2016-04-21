@@ -2,7 +2,7 @@
 
 ### April 20, 2016
 
-### General-Project
+### basic-Auto-Project
 
 An advanced application that we will be using for Selenium automation testing.
 
