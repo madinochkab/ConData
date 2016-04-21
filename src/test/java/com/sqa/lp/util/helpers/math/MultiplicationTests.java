@@ -10,15 +10,13 @@
 
 package com.sqa.lp.util.helpers.math;
 
-import java.util.Arrays;
+import static org.testng.Assert.*;
 
-import org.junit.Assert;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.junit.runners.Parameterized;
-import org.junit.runners.Parameterized.Parameters;
+import java.util.*;
 
-import com.sqa.lp.util.helpers.MyMath;
+import org.testng.annotations.*;
+
+import com.sqa.lp.util.helpers.*;
 
 /**
  * MyMathTests //ADDD (description of class)
@@ -32,10 +30,9 @@ import com.sqa.lp.util.helpers.MyMath;
  * @since 1.0
  *
  */
-@RunWith(Parameterized.class)
 public class MultiplicationTests {
 
-	@Parameters
+	@DataProvider
 	public static Object[][] getData() {
 		Object[][] data = { { new double[] { 2.0, 3.0, 4.0, 2.0 }, 48.0 }, { new double[] { 2.0, 1.0, 5.0 }, 10.0 },
 				{ new double[] { 3.0, 1.5 }, 4.5 }, { new double[] { 0.0, 100.0 }, 0.0 },
@@ -45,17 +42,6 @@ public class MultiplicationTests {
 
 	private double expectedResult;
 	private double[] numbers;
-
-	/**
-	 * @param num
-	 * @param power
-	 * @param result
-	 */
-	public MultiplicationTests(double[] numbers, double expectedResult) {
-		super();
-		this.numbers = numbers;
-		this.expectedResult = expectedResult;
-	}
 
 	// @Test
 	// public void testDivideNumbers() {
@@ -73,8 +59,8 @@ public class MultiplicationTests {
 	// Assert.assertEquals(message, expectedResult, actualResult, 0);
 	// }
 
-	@Test
-	public void testMultNumbers() {
+	@Test(dataProvider = "getData")
+	public void testMultNumbers(double[] numbers, double expectedResult) {
 		double actualResult = MyMath.multNumbers(this.numbers);
 		String numberString = Arrays.toString(this.numbers);
 
@@ -84,7 +70,7 @@ public class MultiplicationTests {
 		String message = String.format("The result of multiplying all numbers %s is %.2f.", numberString, actualResult);
 
 		System.out.println(message);
-		Assert.assertEquals(errorMessage, this.expectedResult, actualResult, 0);
+		assertEquals(this.expectedResult, actualResult, 0, errorMessage);
 	}
 
 }
