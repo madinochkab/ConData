@@ -1,13 +1,13 @@
 ### Advanced-Project
 
-### April 20, 2016
+### April 23, 2016
 
 ### General-Project
 
-An advanced application that we will be using for Selenium automation testing.
+ConData application that we will be using for Selenium automation testing.
 
 * Git
 * Java
 * Maven
 
-[Prathiba Lingappan](http://sqasolution.com) 
+[Madina Siebenthal](http://sqasolution.com) 
